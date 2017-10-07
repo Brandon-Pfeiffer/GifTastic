@@ -36,7 +36,7 @@
   			var results = response.data;
   			for (var n = 0; n < results.length; n++) {
   				if (results[n].rating !== "r" && results[n].rating !== "pg-13") {
-  					var disDiv = $("<div class='item'>");
+  					var disDiv = $('<div class="mulan">');
   					var rating = results[n].rating;
   					var p = $("<p>").text("Rating: " + rating);
   					var disneyImage = $('<img class="images">');
@@ -50,21 +50,22 @@
   				}
   			}
   		});
-    });
+   });   
+
 
   $(document).on("click", ".images", function() {
 
 
       var state = $(this).attr("data-state");
 
-  		if (state === "still") {
-  			$(this).attr("src", $(this).attr("data-animate"));
-  			$(this).attr("data-state", "animate");
-  		} else {
-  			$(this).attr("src", $(this).attr("data-still"));
-  			$(this).attr("data-state", "still");
-  		}
-  });
+  		if (state === "action") {
+             state = $(this).attr("data-state", "action");
+             $(this).attr("src", $(this).attr("data-animate"));
+  	}	else if (state === "still") {
+             state = $(this).attr("data-state", "still");
+             $(this).attr("src", $(this).attr("data-still"));
+  			
+    }
 
 
   $(document).on("click", "#submit", function() {
@@ -78,4 +79,6 @@
     console.log(topics)
 
     showTopics();
+  });
+
   });

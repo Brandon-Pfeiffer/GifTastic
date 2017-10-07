@@ -1,0 +1,14 @@
+.mulan{
+	float: left;
+	width: auto;
+	height: 275px;
+	margin: 5px 5px 5px 5px;
+}
+
+button {
+	margin: 5px, 5px, 5px, 5px;
+}
+
+#buttons{
+	margin-bottom: 20px;
+}
