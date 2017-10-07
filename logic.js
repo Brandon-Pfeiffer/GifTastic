@@ -72,7 +72,7 @@
 
     event.preventDefault();
 
-    var input = $("#inputSuccess").val().trim();
+    var input = $("#frozen").val().trim();
     console.log(input)
 
     topics.push(input);
